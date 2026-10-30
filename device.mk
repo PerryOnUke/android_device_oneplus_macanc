@@ -39,7 +39,9 @@ PRODUCT_PACKAGES += \
     OPlusSettingsProviderResTarget \
     OPlusSettingsResTarget \
     OPlusSystemUIResTarget \
-    OPlusWifiResTarget
+    OPlusWifiResTarget \
+    FrameworksResMacanc \
+    LineageSettingsOverlayDevice
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
@@ -57,3 +59,6 @@ $(call inherit-product, device/oneplus/sm8850-common/common.mk)
 
 # Inherit from the proprietary files makefile.
 $(call inherit-product, vendor/oneplus/macanc/macanc-vendor.mk)
+
+$(call soong_config_set,surfaceflinger,frame_rate_category_high,165)
+$(call soong_config_set,surfaceflinger,frame_rate_category_min,60)

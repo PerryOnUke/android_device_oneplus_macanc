@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Refresh rate used by default, before the user picks one. -->
+    <integer name="config_defaultRefreshRate">120</integer>
+
+    <!-- Highest refresh rate the panel supports. -->
+    <integer name="config_defaultPeakRefreshRate">165</integer>
+
+    <!-- CPU thermal sysfs reports millidegrees; compensate in ThemeUtils.getCPUTemp. -->
+    <integer name="config_sysCPUTempMultiplier">1000</integer>
+</resources>

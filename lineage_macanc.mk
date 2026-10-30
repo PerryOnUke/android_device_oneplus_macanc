@@ -20,6 +20,27 @@ PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
 PRODUCT_MODEL := PLR110
 
+# Lunaris
+LUNARIS_BUILD_TYPE := Community
+WITH_GMS := true
+TARGET_OPTIMIZED_DEXOPT := true
+USE_REALITY_ENGINE := true
+WITH_PIXEL_LAUNCHER := false
+TARGET_USE_WALLPAPERS := false
+TARGET_USE_MAPS := true
+TARGET_USE_FILES := true
+TARGET_USE_GPHOTOS := true
+SURFACE_FLINGER_BOOST := true
+TARGET_ENABLE_BLUR := true
+
+# Display
+TARGET_SUPPORTED_REFRESH_RATES := 60,90,120,144,165
+HBM_SUPPORTED := true
+HBM_NODE := /sys/kernel/oplus_display/hbm
+
+# Nessun nodo sysfs bypass-charge OPlus verificato: toggle Lunaris disabilitato.
+BYPASS_CHARGE_SUPPORTED := false
+
 PRODUCT_GMS_CLIENTID_BASE := android-oneplus
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
