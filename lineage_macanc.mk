@@ -14,6 +14,11 @@ $(call inherit-product, device/oneplus/macanc/device.mk)
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# Soong fsgen: audioeffectservice_qti.xml è fornito sia dal blob vendor (PRODUCT_PACKAGES)
+# sia dalla HAL QCOM (required di libaudioeffecthal.qti) -> collisione tra namespace nel vendor.
+# Teniamo la copia della HAL.
+PRODUCT_PACKAGES := $(filter-out audioeffectservice_qti.xml,$(PRODUCT_PACKAGES))
+
 PRODUCT_NAME := lineage_macanc
 PRODUCT_DEVICE := macanc
 PRODUCT_MANUFACTURER := OnePlus
