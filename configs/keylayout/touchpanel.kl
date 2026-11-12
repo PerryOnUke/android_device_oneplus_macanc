@@ -1,0 +1,7 @@
+# Touchpanel gesture keys (goodix_ts, OPlus touchpanel framework)
+# KEY_F4 (70) is emitted by the driver for the double tap gesture with the
+# screen off; WAKEUP + WAKE makes InputReader wake the display.
+key 70  WAKEUP WAKE
+key 62  WAKEUP WAKE
+key 116 POWER WAKE
+key 142 SLEEP
